@@ -31,8 +31,8 @@ class SignUpViewController: UIViewController {
                 
 //                self.navigationController?.popViewController(animated: true)
                 
-                let uid = validUser.uid
-                let currentUserRef = ref.child("users").child((uid))
+                let currentUid = validUser.uid
+                let currentUserRef = ref.child("users").child((currentUid))
                 currentUserRef.updateChildValues(["firstName" : "", "lastName": "", "email" : email, "phoneNumber": "", "licensePlateNumber": "", "creditCardNumber": ""])
                 
                 Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
