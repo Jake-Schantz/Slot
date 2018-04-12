@@ -9,7 +9,7 @@
 import UIKit
 
 class EditViewController: UIViewController {
-
+    
     
     var selectedTitle: String = ""
     
@@ -21,10 +21,24 @@ class EditViewController: UIViewController {
     
     @IBAction func cancelButtonTapped(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
+        textField.endEditing(true)
+        self.setEditing(false, animated: false)
     }
     @IBAction func updateButtonTapped(_ sender: Any) {
         guard let newInfo = textField.text
             else{return}
+        if selectedTitle == "Credit Card Info" && newInfo.count != 16{
+            alert("Invalid Input", "Credit Card Number must have 16 digits")
+            return
+        }
+        else if selectedTitle == "Phone Number" && newInfo.count != 10 {
+            alert("Invalid Input", "Phone Number must have 10 digits")
+            return
+        }
+        else if selectedTitle == "License Plate Number" && newInfo.count != 6 {
+            alert("Invalid Input", "License Plate Number must have 6 digits")
+            return
+        }
         CurrentUser.contentDictionary[selectedTitle] = newInfo
         CurrentUser.storeInfo()
         CurrentUser.saveInfoToDatabase()
@@ -34,9 +48,14 @@ class EditViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         textField.becomeFirstResponder()
+        if selectedTitle == "Credit Card Info" || selectedTitle == "Phone Number" {
+            textField.keyboardType = .numberPad
+        }
     }
+    
     override func viewWillDisappear(_ animated: Bool) {
-        dismissKeyboard()
+        textField.endEditing(true)
+        self.setEditing(false, animated: false)
     }
     
     override func viewDidLoad() {
@@ -46,7 +65,7 @@ class EditViewController: UIViewController {
         
         updateButton.setTitle("Update \(selectedTitle)", for: .normal)
         updateButton.layer.cornerRadius = 18
-//        self.createGradientLayer(inputView: updateButton)
+        //        self.createGradientLayer(inputView: updateButton)
         updateButton.backgroundColor = Slot.blue
         updateButton.layer.shadowColor = UIColor.black.cgColor
         updateButton.layer.shadowOpacity = 0.5
@@ -57,5 +76,4 @@ class EditViewController: UIViewController {
         x = x.withRenderingMode(.alwaysOriginal)
         cancelButton.setImage(x, for: .normal)
     }
-
 }

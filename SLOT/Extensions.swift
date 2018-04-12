@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 extension UIViewController {
+    
     func alert(_ title: String,_ message: String){
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let action = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
@@ -46,7 +47,7 @@ extension UIViewController {
         label.text = inputText
         label.textColor = Slot.blue
         label.textAlignment = .center
-        label.font = UIFont(name: "Helvetica Neue", size: 20.0)
+        label.font = UIFont(name: Slot.fontString, size: 20.0)
         label.attributedText = addLetterSpacing(label.text!)
         return label
     }
@@ -63,6 +64,7 @@ extension UITextField {
         self.backgroundColor = .clear
         self.tintColor = .white
         self.textColor = .white
+        self.font = UIFont(name: Slot.fontString, size: 20)
     }
     
     func makePlaceHolderWhite(_ placeHolderText: String){

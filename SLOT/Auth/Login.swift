@@ -59,7 +59,7 @@ class LoginViewController: UIViewController {
 
     
     override func viewDidLoad() {
-        self.hideKeyboard()
+        createHideKeyboardGesture()
         initatePlayer()
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
@@ -67,28 +67,28 @@ class LoginViewController: UIViewController {
         navigationController?.navigationBar.titleTextAttributes = textAttributes
         navigationController?.navigationBar.tintColor = .white
         
-        
-        
         loginButton.layer.cornerRadius = 18
-        self.createGradientLayer(inputView: loginButton)
+        loginButton.titleLabel?.font = UIFont(name: Slot.fontString, size: 18)
+        loginButton.backgroundColor = Slot.blue
         
         passwordTextField.makePlaceHolderWhite("Password")
         emailTextField.makePlaceHolderWhite("Email")
         passwordTextField.customizeAuth()
         emailTextField.customizeAuth()
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        self.addKeyboardObserver()
         self.navigationController?.navigationBar.isHidden = true
-        invertPlayer()
+        avPlayer.play()
         super.viewWillAppear(animated)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         self.navigationController?.navigationBar.isHidden = false
-        self.removeKeyboardObserver()
-        invertPlayer()
+//        self.removeKeyboardObserver()
+        avPlayer.pause()
         super.viewWillDisappear(animated)
     }
     
@@ -97,7 +97,6 @@ class LoginViewController: UIViewController {
     func initatePlayer(){
         // None of our movies should interrupt system music playback.
         _ = try? AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback, with: .mixWithOthers)
-        
         let URL = Bundle.main.url(forResource: "Lights", withExtension: "mp4")
         avPlayer = AVPlayer(url: URL!)
         avPlayerLayer = AVPlayerLayer(player: avPlayer)
@@ -107,21 +106,33 @@ class LoginViewController: UIViewController {
         avPlayerLayer.frame = view.layer.bounds
         view.backgroundColor = .clear
         view.layer.insertSublayer(avPlayerLayer, at: 0)
+        NotificationCenter.default.addObserver(self, selector: #selector(applicationDidBecomeActive), name: NSNotification.Name.UIApplicationDidBecomeActive, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(playerItemDidReachEnd(notification:)), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: avPlayer.currentItem)
     }
-    
+    @objc func applicationDidBecomeActive() {
+        if self.viewIfLoaded?.window != nil {
+            avPlayer.play()
+        }
+    }
     @objc func playerItemDidReachEnd(notification: Notification) {
         let playerItem: AVPlayerItem = notification.object as! AVPlayerItem
         playerItem.seek(to: kCMTimeZero, completionHandler: nil)
     }
+}
+
+extension LoginViewController: UITextFieldDelegate {
     
-    func invertPlayer(){
-        if paused {
-            avPlayer.play()
-        }
-        else {
-            avPlayer.pause()
-        }
-        paused = !paused
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        self.summonKeyboard()
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        self.dismissKeyboard()
     }
 }

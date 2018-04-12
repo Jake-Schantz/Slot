@@ -13,6 +13,9 @@
         <array key="HelveticaNeue.ttc">
             <string>HelveticaNeue</string>
         </array>
+        <array key="Montserrat-Regular.ttf">
+            <string>Montserrat-Regular</string>
+        </array>
     </customFonts>
     <scenes>
         <!--Login View Controller-->
@@ -24,7 +27,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ci-MZ-uDF">
-                                <rect key="frame" x="97.5" y="379" width="125" height="45"/>
+                                <rect key="frame" x="97.5" y="375" width="125" height="45"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="125" id="0FA-tU-dna"/>
@@ -39,8 +42,8 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Xx-Gz-k9O">
-                                <rect key="frame" x="40" y="511" width="240" height="32"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <rect key="frame" x="35" y="511" width="250" height="32"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
                                 <state key="normal" title="Don't have an Acount? Sign Up">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -49,16 +52,16 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo(white)" translatesAutoresizingMaskIntoConstraints="NO" id="gZT-Su-mhm">
-                                <rect key="frame" x="40" y="29" width="240" height="150"/>
+                                <rect key="frame" x="40" y="33" width="240" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="14L-hg-EFt"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="QK9-DO-jbm">
-                                <rect key="frame" x="50" y="199" width="220" height="130"/>
+                                <rect key="frame" x="50" y="203" width="220" height="122"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="meA-K3-dii">
-                                        <rect key="frame" x="0.0" y="0.0" width="220" height="60"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="meA-K3-dii">
+                                        <rect key="frame" x="0.0" y="0.0" width="220" height="56"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" placeholder="Email" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="nIy-wL-lXy">
                                                 <rect key="frame" x="0.0" y="0.0" width="220" height="50"/>
@@ -66,11 +69,11 @@
                                                     <constraint firstAttribute="height" constant="50" id="5zN-a8-fkz"/>
                                                 </constraints>
                                                 <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
-                                                <textInputTraits key="textInputTraits" keyboardAppearance="alert" returnKeyType="done" textContentType="email"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <textInputTraits key="textInputTraits" keyboardAppearance="alert" returnKeyType="done" enablesReturnKeyAutomatically="YES" textContentType="email"/>
                                             </textField>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bvS-pf-sqP">
-                                                <rect key="frame" x="0.0" y="59" width="220" height="1"/>
+                                                <rect key="frame" x="0.0" y="55" width="220" height="1"/>
                                                 <color key="backgroundColor" red="0.32272577289999999" green="0.27814671400000002" blue="0.99221712350000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="7Gn-IF-5We"/>
@@ -78,8 +81,8 @@
                                             </view>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="Enk-WN-xPf">
-                                        <rect key="frame" x="0.0" y="70" width="220" height="60"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Enk-WN-xPf">
+                                        <rect key="frame" x="0.0" y="66" width="220" height="56"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" placeholder="Password" minimumFontSize="20" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="HFt-BS-wYZ" userLabel="Password TextField">
                                                 <rect key="frame" x="0.0" y="0.0" width="220" height="50"/>
@@ -87,11 +90,11 @@
                                                     <constraint firstAttribute="height" constant="50" id="C3q-L4-mYa"/>
                                                 </constraints>
                                                 <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <textInputTraits key="textInputTraits" keyboardAppearance="alert" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="password"/>
                                             </textField>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KxT-Tz-lR3">
-                                                <rect key="frame" x="0.0" y="59" width="220" height="1"/>
+                                                <rect key="frame" x="0.0" y="55" width="220" height="1"/>
                                                 <color key="backgroundColor" red="0.32272577289999999" green="0.27814671400000002" blue="0.99221712350000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="gNf-Z7-sWV"/>
@@ -139,19 +142,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create an Account" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6k4-xR-sEh">
-                                <rect key="frame" x="39.5" y="29" width="242" height="150"/>
+                                <rect key="frame" x="30" y="33" width="260" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="quc-ok-7M3"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="29"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="28"/>
                                 <color key="textColor" red="1" green="0.9999879002571106" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="X1V-cQ-hnA">
-                                <rect key="frame" x="50" y="199" width="220" height="130"/>
+                                <rect key="frame" x="50" y="203" width="220" height="122"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="N9P-fc-hrK">
-                                        <rect key="frame" x="0.0" y="0.0" width="220" height="60"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="N9P-fc-hrK">
+                                        <rect key="frame" x="0.0" y="0.0" width="220" height="56"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" placeholder="Email" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="iC6-zL-duI">
                                                 <rect key="frame" x="0.0" y="0.0" width="220" height="50"/>
@@ -159,11 +162,11 @@
                                                     <constraint firstAttribute="height" constant="50" id="CIw-ts-bRL"/>
                                                 </constraints>
                                                 <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
-                                                <textInputTraits key="textInputTraits" keyboardAppearance="alert" returnKeyType="done" textContentType="email"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <textInputTraits key="textInputTraits" keyboardAppearance="alert" returnKeyType="done" enablesReturnKeyAutomatically="YES" textContentType="email"/>
                                             </textField>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MrM-Qg-5D6">
-                                                <rect key="frame" x="0.0" y="59" width="220" height="1"/>
+                                                <rect key="frame" x="0.0" y="55" width="220" height="1"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="d1A-Xk-c7l"/>
@@ -171,8 +174,8 @@
                                             </view>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="f3H-jy-hjs">
-                                        <rect key="frame" x="0.0" y="70" width="220" height="60"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="f3H-jy-hjs">
+                                        <rect key="frame" x="0.0" y="66" width="220" height="56"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" placeholder="Password" minimumFontSize="20" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="MHg-xh-d1P" userLabel="Password TextField">
                                                 <rect key="frame" x="0.0" y="0.0" width="220" height="50"/>
@@ -180,11 +183,11 @@
                                                     <constraint firstAttribute="height" constant="50" id="By8-pt-gxg"/>
                                                 </constraints>
                                                 <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
-                                                <textInputTraits key="textInputTraits" keyboardAppearance="alert" returnKeyType="done" textContentType="password"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <textInputTraits key="textInputTraits" keyboardAppearance="alert" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="password"/>
                                             </textField>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XI8-to-0hc">
-                                                <rect key="frame" x="0.0" y="59" width="220" height="1"/>
+                                                <rect key="frame" x="0.0" y="55" width="220" height="1"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="iWx-kx-Nfq"/>
@@ -195,13 +198,13 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B5O-yI-Eyg">
-                                <rect key="frame" x="98" y="379" width="125" height="40"/>
+                                <rect key="frame" x="98" y="375" width="125" height="40"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="125" id="BnK-LC-OJk"/>
                                     <constraint firstAttribute="height" constant="40" id="rVD-DA-4wb"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="titleEdgeInsets" minX="2" minY="0.0" maxX="0.0" maxY="2"/>
                                 <state key="normal" title="Sign Up">

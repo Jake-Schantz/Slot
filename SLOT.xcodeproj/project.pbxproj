@@ -30,6 +30,7 @@
 		EBCD15BD207C5F770003D2F8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EBCD15BC207C5F760003D2F8 /* GoogleService-Info.plist */; };
 		EBCD15C0207C61A50003D2F8 /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCD15BF207C61A50003D2F8 /* SignUp.swift */; };
 		EBCD15C2207C61DA0003D2F8 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCD15C1207C61DA0003D2F8 /* Extensions.swift */; };
+		EBD3AF2C207F206A0044FE96 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EBD3AF26207F203F0044FE96 /* Montserrat-Regular.ttf */; };
 		EBE7F867207E5ADF0044D756 /* BottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE7F866207E5ADF0044D756 /* BottomSheetViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +60,24 @@
 		EBCD15BC207C5F760003D2F8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EBCD15BF207C61A50003D2F8 /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 		EBCD15C1207C61DA0003D2F8 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		EBD3AF19207F203C0044FE96 /* Montserrat-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-MediumItalic.ttf"; sourceTree = "<group>"; };
+		EBD3AF1A207F203C0044FE96 /* Montserrat-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraBold.ttf"; sourceTree = "<group>"; };
+		EBD3AF1B207F203D0044FE96 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
+		EBD3AF1C207F203D0044FE96 /* Montserrat-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-LightItalic.ttf"; sourceTree = "<group>"; };
+		EBD3AF1D207F203D0044FE96 /* Montserrat-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		EBD3AF1E207F203D0044FE96 /* Montserrat-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-BoldItalic.ttf"; sourceTree = "<group>"; };
+		EBD3AF1F207F203D0044FE96 /* Montserrat-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-BlackItalic.ttf"; sourceTree = "<group>"; };
+		EBD3AF20207F203E0044FE96 /* Montserrat-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Black.ttf"; sourceTree = "<group>"; };
+		EBD3AF21207F203E0044FE96 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
+		EBD3AF22207F203E0044FE96 /* Montserrat-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		EBD3AF23207F203E0044FE96 /* Montserrat-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Light.ttf"; sourceTree = "<group>"; };
+		EBD3AF24207F203E0044FE96 /* Montserrat-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraLight.ttf"; sourceTree = "<group>"; };
+		EBD3AF25207F203E0044FE96 /* Montserrat-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Italic.ttf"; sourceTree = "<group>"; };
+		EBD3AF26207F203F0044FE96 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
+		EBD3AF27207F203F0044FE96 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
+		EBD3AF28207F203F0044FE96 /* Montserrat-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Thin.ttf"; sourceTree = "<group>"; };
+		EBD3AF29207F203F0044FE96 /* Montserrat-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ThinItalic.ttf"; sourceTree = "<group>"; };
+		EBD3AF2A207F203F0044FE96 /* Montserrat-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
 		EBE7F866207E5ADF0044D756 /* BottomSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetViewController.swift; sourceTree = "<group>"; };
 		F6C6D3F642F71F996813FB36 /* Pods-SLOT.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SLOT.release.xcconfig"; path = "Pods/Target Support Files/Pods-SLOT/Pods-SLOT.release.xcconfig"; sourceTree = "<group>"; };
 		F6CB7F86E98C3B2FF79BCF4B /* Pods-SLOT.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SLOT.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SLOT/Pods-SLOT.debug.xcconfig"; sourceTree = "<group>"; };
@@ -146,6 +165,7 @@
 				EB812BE1207D374A000D9942 /* Account */,
 				EBBB3164207C63ED0049ACEF /* Main.storyboard */,
 				EBCD15AD2079E7260003D2F8 /* Assets.xcassets */,
+				EBD3AF2B207F204A0044FE96 /* Montserrat */,
 				EBCD15AF2079E7260003D2F8 /* LaunchScreen.storyboard */,
 				EBCD15B22079E7260003D2F8 /* Info.plist */,
 				EBCD15BC207C5F760003D2F8 /* GoogleService-Info.plist */,
@@ -166,6 +186,31 @@
 			path = Auth;
 			sourceTree = "<group>";
 		};
+		EBD3AF2B207F204A0044FE96 /* Montserrat */ = {
+			isa = PBXGroup;
+			children = (
+				EBD3AF20207F203E0044FE96 /* Montserrat-Black.ttf */,
+				EBD3AF1F207F203D0044FE96 /* Montserrat-BlackItalic.ttf */,
+				EBD3AF27207F203F0044FE96 /* Montserrat-Bold.ttf */,
+				EBD3AF1E207F203D0044FE96 /* Montserrat-BoldItalic.ttf */,
+				EBD3AF1A207F203C0044FE96 /* Montserrat-ExtraBold.ttf */,
+				EBD3AF2A207F203F0044FE96 /* Montserrat-ExtraBoldItalic.ttf */,
+				EBD3AF24207F203E0044FE96 /* Montserrat-ExtraLight.ttf */,
+				EBD3AF1D207F203D0044FE96 /* Montserrat-ExtraLightItalic.ttf */,
+				EBD3AF25207F203E0044FE96 /* Montserrat-Italic.ttf */,
+				EBD3AF23207F203E0044FE96 /* Montserrat-Light.ttf */,
+				EBD3AF1C207F203D0044FE96 /* Montserrat-LightItalic.ttf */,
+				EBD3AF21207F203E0044FE96 /* Montserrat-Medium.ttf */,
+				EBD3AF19207F203C0044FE96 /* Montserrat-MediumItalic.ttf */,
+				EBD3AF26207F203F0044FE96 /* Montserrat-Regular.ttf */,
+				EBD3AF1B207F203D0044FE96 /* Montserrat-SemiBold.ttf */,
+				EBD3AF22207F203E0044FE96 /* Montserrat-SemiBoldItalic.ttf */,
+				EBD3AF28207F203F0044FE96 /* Montserrat-Thin.ttf */,
+				EBD3AF29207F203F0044FE96 /* Montserrat-ThinItalic.ttf */,
+			);
+			path = Montserrat;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -178,7 +223,6 @@
 				EBCD159D2079E7260003D2F8 /* Frameworks */,
 				EBCD159E2079E7260003D2F8 /* Resources */,
 				6F037678C7CE09B7D44AA4C7 /* [CP] Embed Pods Frameworks */,
-				5CE7E4B72F2B4283A9DDC685 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -228,6 +272,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBD3AF2C207F206A0044FE96 /* Montserrat-Regular.ttf in Resources */,
 				EB812BE9207DEADF000D9942 /* Lights.mp4 in Resources */,
 				EB812BDC207D0F85000D9942 /* flippedBlue.mp4 in Resources */,
 				EBCD15B12079E7260003D2F8 /* LaunchScreen.storyboard in Resources */,
@@ -257,21 +302,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		5CE7E4B72F2B4283A9DDC685 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SLOT/Pods-SLOT-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		6F037678C7CE09B7D44AA4C7 /* [CP] Embed Pods Frameworks */ = {

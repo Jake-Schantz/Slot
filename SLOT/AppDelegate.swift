@@ -17,6 +17,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        let font = UIFont(name: Slot.fontString, size: 17)
+        let textAttributes = [NSAttributedStringKey.font: font]
+        UIBarButtonItem.appearance().setTitleTextAttributes(textAttributes, for: .normal)
+
+//        UIBarButtonItem.appearance(whenContainedInInstancesOf: UINavigationBar)
+        
+        
+        
         FirebaseApp.configure()
         addNotificationObservers()
         UINavigationBar.appearance().barStyle = .blackOpaque

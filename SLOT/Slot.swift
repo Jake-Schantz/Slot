@@ -16,6 +16,9 @@ class Slot {
     static let white = UIColor(red: 250/255, green: 250/255, blue: 250/255, alpha: 1)
     static let lightBlue = UIColor(red: 50/255, green: 137/255, blue: 251/255, alpha: 1)
     
+    // Font
+    static let fontString: String = "Montserrat-Regular"
+    
     // Annotation Colors
     static let green = UIColor(red: 50/255, green: 170/255, blue: 50/255, alpha: 1)
     static let yellow = UIColor(red: 220/255, green: 220/255, blue: 20/255, alpha: 1)

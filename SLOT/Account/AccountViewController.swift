@@ -34,7 +34,7 @@ class AccountViewController: UIViewController {
     
     
     func createLogOutButton() {
-        let logOutButton = UIBarButtonItem(title: "Log Out", style: .done, target: self, action: #selector(logOutButtonTapped))
+        let logOutButton = UIBarButtonItem(title: "Log Out", style: .plain, target: self, action: #selector(logOutButtonTapped))
         navigationItem.rightBarButtonItem = logOutButton
     }
     @objc func logOutButtonTapped() {
@@ -80,9 +80,21 @@ extension AccountViewController: UITableViewDelegate {
         guard let editVC = storyboard?.instantiateViewController(withIdentifier: "EditViewController") as? EditViewController
             else{return}
         let title = titles[indexPath.row]
+        if title == "Email Address" {
+            let title = "Error"
+            let message = "Email Address cannot be changed at this time"
+            let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+            let action = UIAlertAction(title: "Ok", style: .cancel, handler: { (ok) in
+                tableView.deselectRow(at: indexPath, animated: true)
+                return
+            })
+            alert.addAction(action)
+            present(alert, animated: true, completion: nil)
+        }
         editVC.selectedTitle = title
         present(editVC, animated: true, completion: nil)
-        tableView.deselectRow(at: indexPath, animated: false)
+//        tableView.deselectRow(at: indexPath, animated: false)
+
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

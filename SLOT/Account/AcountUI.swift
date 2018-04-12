@@ -15,15 +15,15 @@ import FirebaseAuth
 extension AccountViewController {
     
     
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         tableView.reloadData()
-        invertPlayer()
+        avPlayer.play()
     }
     
-    override func viewDidDisappear(_ animated: Bool) {
+    override func viewWillDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        invertPlayer()
+        avPlayer.pause()
     }
     
     
@@ -53,7 +53,7 @@ extension AccountViewController {
         let textAttributes = [NSAttributedStringKey.foregroundColor: Slot.white]
         navigationController?.navigationBar.titleTextAttributes = textAttributes
         navigationController?.navigationBar.tintColor = .white
-        self.title = "Account Info"
+//        self.title = "Account Info"
         
         let gradientView = UIView()
         gradientView.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: 64)
@@ -62,13 +62,13 @@ extension AccountViewController {
     }
     
     
-    func createLabels(for indexPath: IndexPath) -> UITableViewCell{
+    func createLabels(for indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
         cell.selectionStyle = .default
         cell.backgroundColor = .clear
         
         let titleLabel = UILabel(frame: CGRect(x: 15, y: 25, width: tableView.bounds.size.width, height: 20))
-        titleLabel.font = UIFont(name: "Helvetica Neue", size: 20)
+        titleLabel.font = UIFont(name: Slot.fontString, size: 20)
         titleLabel.textColor = UIColor.white
         titleLabel.text = titles[indexPath.row]
         titleLabel.sizeToFit()
@@ -80,9 +80,14 @@ extension AccountViewController {
         border.backgroundColor = Slot.blue
         
         let cellLabel = UILabel(frame: CGRect(x: 15, y: 56, width: tableView.bounds.size.width, height: 40))
-        cellLabel.font = UIFont(name: "Helvetica Neue", size: 20)
+        cellLabel.font = UIFont(name: Slot.fontString, size: 20)
         cellLabel.textColor = UIColor.white
-        cellLabel.text = CurrentUser.contentDictionary[titles[indexPath.row]]
+        var text = CurrentUser.contentDictionary[titles[indexPath.row]]!
+        if titles[indexPath.row] == "Credit Card Info" && text != "" {
+            let last4 = text.suffix(4)
+            text = "**** **** **** \(last4)"
+        }
+        cellLabel.text = text
         cellLabel.sizeToFit()
         
         cell.contentView.addSubview(titleLabel)
@@ -106,21 +111,16 @@ extension AccountViewController {
         avPlayerLayer.frame = view.layer.bounds
         view.backgroundColor = .clear
         view.layer.insertSublayer(avPlayerLayer, at: 0)
+        NotificationCenter.default.addObserver(self, selector: #selector(applicationDidBecomeActive), name: NSNotification.Name.UIApplicationDidBecomeActive, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(playerItemDidReachEnd(notification:)), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: avPlayer.currentItem)
     }
-    
+    @objc func applicationDidBecomeActive() {
+        if self.viewIfLoaded?.window != nil {
+            avPlayer.play()
+        }
+    }
     @objc func playerItemDidReachEnd(notification: Notification) {
         let playerItem: AVPlayerItem = notification.object as! AVPlayerItem
         playerItem.seek(to: kCMTimeZero, completionHandler: nil)
-    }
-    
-    func invertPlayer(){
-        if paused {
-            avPlayer.play()
-        }
-        else {
-            avPlayer.pause()
-        }
-        paused = !paused
     }
 }
